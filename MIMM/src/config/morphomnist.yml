@@ -1,0 +1,88 @@
+wandbProjectName:
+  desc: Name of the project for wandb
+  value: MIMM
+wandbGroupName:
+  desc: Name of wandb group
+  value: MTL_MI
+randomSeed:
+  desc: Set random init seed
+  value: 42
+runName:
+  desc: name of run
+  value: 'MTL_MI_morphomnist'
+training_dataset:
+  desc: Set training dataset
+  value: MorphoMNIST
+trainType:
+  desc: Type of training
+  value: MTL_MI
+numberClasses:
+  desc: Number of primary task (PT) classes
+  value: 2
+num_sc_variables:
+  desc: Number of spurious correlation variables
+  value: 2
+numberClassesConfounding:
+  desc: Number of spuriously correlated task (SC) classes
+  value: 2
+listOf_labels:
+  desc: all labels for each task in MTL
+  value: [["Small Number (0-4)", "High Number (5-9)"],
+          ["thin", "thick"],
+          ["not rotated","rotated"]
+          ]
+useConfoundedDataset:
+  desc: True, if dataset should be confounded
+  value: True
+confoundingRatio:
+  desc: Confounding ratio per class
+  value: [0.9, 0.9]
+batchSize:
+  desc: Number of batchs
+  value: 500
+epochs:
+  desc: Number of Epochs
+  value: 200
+mi_epochs:
+  desc: Number of epochs to train MINE only
+  value: 500
+lr:
+  desc: Learning rate
+  value: 0.00001
+feature_vector_length:
+  desc: Length of feature vector
+  value: 6
+nr_batches_MI_train_multiple:
+  desc: defines the number of training MI model, before training the feature encoder
+  value: [5]
+nr_batches_MI_train:
+  desc: Update with current value from nr_batches_MI_train_multiple
+  value: 0
+sc_lambda:
+  desc: Defines ratio of sc_loss added to pt_loss
+  value: 1
+mi_lambda:
+  desc: Update with current mi_lambda value from mi_lambdas
+  value: 1
+fe_max_batches:
+  desc: number of batches used to train the feature encoder per training step
+  value: 2
+mi_max_batches:
+  desc: number of batches used for finding supremum/ training MIMM per training step
+  value: 5
+
+input_img_size:
+  desc: Size of input image
+  value: 28
+
+choose_mi_loss:
+  desc: choose between joint loss or independent loss
+  value: 0
+
+adaScale:
+  desc: set to true to use adaptive mi scaling
+  value: True
+
+useCorrectedMIgrad:
+  desc: set to true to use corrected gradients for MI
+  value: True

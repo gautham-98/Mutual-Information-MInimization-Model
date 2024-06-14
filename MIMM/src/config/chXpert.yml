@@ -1,0 +1,83 @@
+wandbProjectName:
+  desc: Name of the project for wandb
+  value: MIMM
+wandbGroupName:
+  desc: Name of wandb group
+  value: MTL_MI
+randomSeed:
+  desc: Set random init seed
+  value: 42
+runName:
+  desc: name of run for tsne plots
+  value: 'MTL_MI_chxpert'
+training_dataset:
+  desc: Set training dataset
+  value: chXpert
+trainType:
+  desc: Type of training
+  value: MTL_MI
+numberClasses:
+  desc: Number of primary task (PT) classes
+  value: 2
+num_sc_variables:
+  desc: Number of spurious correlation variabless
+  value: 2
+numberClassesConfounding:
+  desc: Number of spuriously correlated task (SC) classes
+  value: 2
+labels:
+  desc: choose labels to choose for the task
+  value: ["Pleural Effusion","Sex", "Age"]
+listOf_labels:
+  desc: all labels for each task in MTL
+  value: [["No Pleural Effusion", "Pleural Effusion"],
+          ["male", "Female"],
+          ["young","elderly"]
+          ]
+confoundingRatio:
+  desc: Confounding ratio per class
+  value: [0.9, 0.9]
+batchSize:
+  desc: Number of batchs
+  value: 150
+epochs:
+  desc: Number of Epochs
+  value: 300
+lr:
+  desc: Learning rate
+  value: 0.00001
+feature_vector_length:
+  desc: Length of feature vector
+  value: 6
+sc_lambda:
+  desc: Defines ratio of sc_loss added to pt_loss
+  value: 1
+mi_lambda:
+  desc: Update with current mi_lambda value from mi_lambdas
+  value: 1.5
+fe_max_batches:
+  desc: number of batches used to train the feature encoder per training step
+  value: 1
+mi_max_batches:
+  desc: number of batches used for finding supremum/ training MIMM per training step
+  value: 5
+
+input_img_size:
+  desc: Size of input image
+  value: 96
+
+choose_mi_loss:
+  desc: choose between joint loss or independent loss
+  value: 0
+
+adaScale:
+  desc: set to true to use adaptive mi scaling
+  value: True
+
+useCorrectedMIgrad:
+  desc: set to true to use corrected gradients for MI
+  value: True
+
+selectFeatureEncoder:
+  desc: set '0' for custom and '1' for densenet-121
+  value: 1
