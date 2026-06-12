@@ -15,19 +15,19 @@ Deep learning methodologies rely on the ability to leverage relationships betwee
 
 ## Causal Structure
 
-The image X is caused by the primary label Y and spurious confounders Z₀, Z₁. The green arrows show the direction of prediction — the model predicts Y, Z₀, and Z₁ from X. The red dotted lines indicate the spurious correlations between the primary task and the confounders that the model must avoid learning.
+The image X is caused by the primary label Y and spurious confounders Z₀, Z₁. The green arrows show the direction of prediction, the model predicts Y, Z₀, and Z₁ from X. The red dotted lines indicate the spurious correlations between the primary task and the confounders that the model must avoid learning.
 
-![Causal Structure](thesis/figures/causal_structure.png)
+<p align="center"><img src="thesis/figures/causal_structure.png" width="400"/></p>
 
 ## Results: t-SNE Visualizations
 
-t-SNE plots of the primary task feature vectors on the CheXpert dataset, colored by confounder label (sex: male/female, age: young/elderly). **Clear cluster separation** indicates the model has learned the spurious correlation — its features encode the confounder. **No clear separation** (interleaved colors) indicates the model learned to represent the primary task without relying on the confounding variables, which is the desired outcome of MI minimization.
+t-SNE plots of the primary task feature vectors on the CheXpert dataset, colored by confounder label (sex: male/female, age: young/elderly). **Clear cluster separation** indicates the model has learned the spurious correlation, its features encode the confounder. **No clear separation** (interleaved colors) indicates the model learned to represent the primary task without relying on the confounding variables, which is the desired outcome of MI minimization.
 
-**Baseline — no MI minimization (features encode sex and age confounders)**
-![TSNE CheXpert — Baseline](thesis/figures/tsne_chx_baseline_primary.png)
+**Baseline: no MI minimization (features encode sex and age confounders)**
+![TSNE CheXpert Baseline](thesis/figures/tsne_chx_baseline_primary.png)
 
-**MIMM — with MI minimization (features disentangled from sex and age)**
-![TSNE CheXpert — MIMM](thesis/figures/tsne_chx_ada_corr_primary.png)
+**MIMM: with MI minimization (features disentangled from sex and age)**
+![TSNE CheXpert MIMM](thesis/figures/tsne_chx_ada_corr_primary.png)
 
 ## Thesis
 ![Thesis](thesis/iss-thesis.pdf)
