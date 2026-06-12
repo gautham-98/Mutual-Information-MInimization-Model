@@ -1,9 +1,16 @@
-|![](media/unilogo.gif)                             |
-|:-------------------------------------------------:|
-|             **Universität Stuttgart**             |
-| Institut für Signalverarbeitung und Systemtheorie |
-|               Prof. Dr.-Ing. B. Yang              |
-|![](media/isslogocolor.gif)                        |
+<div align="center">
+
+![](media/unilogo.gif)
+
+**Universität Stuttgart**
+
+Institut für Signalverarbeitung und Systemtheorie
+
+Prof. Dr.-Ing. B. Yang
+
+![](media/isslogocolor.gif)
+
+</div>
 
 # Resarch thesis
 
