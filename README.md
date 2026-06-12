@@ -22,9 +22,12 @@ Deep learning methodologies rely on the ability to leverage relationships betwee
 
 ## Causal Structure
 
-The image X is caused by the primary label Y and spurious confounders Z₀, Z₁. The green arrows show the direction of prediction, the model predicts Y, Z₀, and Z₁ from X. The red dotted lines indicate the spurious correlations between the primary task and the confounders that the model must avoid learning.
+The image X is caused by the primary label Y(disease label) and confounders Z₀ (eg. sex), Z₁(eg. age). The green arrows show the direction of prediction, the model predicts Y, Z₀, and Z₁ from X. The red dotted lines indicate the spurious correlations between the primary task and the confounders that the model must avoid learning by minimizing the mutual information between the tasks.
 
-<p align="center"><img src="thesis/figures/causal_structure.png" width="400"/></p>
+<table align="center"><tr>
+<td><img src="thesis/figures/causal_structure.png" width="380"/></td>
+<td><img src="thesis/figures/chest_xray.jpg" width="300"/></td>
+</tr></table>
 
 ## Results: t-SNE Visualizations
 
